@@ -12,6 +12,7 @@ end
 end
 
 def reduce(array,start = nil)
+    binding.pry
     if start == nil
      start = array[0]
       i = 1
