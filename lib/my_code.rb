@@ -10,11 +10,13 @@ end
   results
 end
 
-def reduce(array,start = 0)
-    if start == "" 
+def reduce(array,start = nil)
+    if start == nil
      start = array[0]
-    end
+      i = 1
+    else
      i = 0
+    end
     accumulator = yield start
     while i < array.length
     current = yield array[i]
