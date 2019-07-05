@@ -19,8 +19,8 @@ def reduce(array,start = nil)
     end
     accumulator = start
     while i < array.length
-    current = yield (array[i], accumulator)
-    accumulator += current
+    current = array[i]
+    accumulator += yield(current, accumulator)
     i += 1
   end
     accumulator
