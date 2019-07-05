@@ -12,7 +12,6 @@ end
 end
 
 def reduce(array,start = nil)
-    
     if start == nil
      start = array[0]
       i = 1
@@ -21,11 +20,10 @@ def reduce(array,start = nil)
     end
     accumulator = start
     while i < array.length
-    current = array[i]
-    accumulator = yield(accumulator,current)
-    # binding.pry
-    i += 1
-  end
+      current = array[i]
+      accumulator = yield(accumulator,current)
+      i += 1
+    end
     accumulator
 end
 
