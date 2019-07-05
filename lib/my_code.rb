@@ -1,4 +1,5 @@
 # Your Code Here
+require "pry"
 def map(arr)
   results = []
   i = 0
