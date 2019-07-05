@@ -11,16 +11,16 @@ end
 end
 
 def reduce(array,start = 0)
-   i = 0
     if start == "" 
      start = array[0]
-    else
+    end
+     i = 0
     accumulator = yield start
     while i < array.length
     current = yield array[i]
     accumulator += current
     i += 1
-    end
+    
   end
     accumulator
 end
