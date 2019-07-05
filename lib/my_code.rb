@@ -23,7 +23,7 @@ def reduce(array,start = nil)
     while i < array.length
     current = array[i]
     accumulator = yield(current, accumulator)
-    # binding.pry
+    binding.pry
     i += 1
   end
     accumulator
