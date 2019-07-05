@@ -12,7 +12,7 @@ end
 
 def reduce(array,start = 0)
    i = 0
-    if start == ""
+    if start == "" || start == NaN
      start = array[0]
     else
     accumulator = yield start
