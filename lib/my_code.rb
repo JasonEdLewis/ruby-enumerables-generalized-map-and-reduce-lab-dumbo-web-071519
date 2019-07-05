@@ -17,12 +17,11 @@ def reduce(array,start = nil)
     else
      i = 0
     end
-    accumulator = yield start
+    accumulator = start
     while i < array.length
-    current = yield array[i]
+    current = yield (array[i], accumulator)
     accumulator += current
     i += 1
-    
   end
     accumulator
 end
